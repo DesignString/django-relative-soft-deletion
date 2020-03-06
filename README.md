@@ -1,0 +1,1 @@
+# django-relative-soft-deletion
