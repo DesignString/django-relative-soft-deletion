@@ -34,7 +34,10 @@ class Employee(SoftDeletionModel):
 
 ## Functions
 
-`objects`: Return result excluding deleted values
-`all_objects`: Return result including deleted values
+`Model.objects()`: Return result excluding deleted values
+
+`Model.all_objects()`: Return result including deleted values
+
 `delete()`: Soft delete the item
+
 `hard_delete()`: Permanent delete the item
