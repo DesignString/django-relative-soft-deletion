@@ -18,15 +18,11 @@ pip install git+https://github.com/DesignString/django-relative-soft-deletion.gi
 
 ## Usage
 
-Import the `SoftDeletionModel` from `softdeletion.SoftDeletion` and inherit in your Model classes:
-
-```
-from softdeletion.SoftDeletion import SoftDeletionModel
-```
+Import the `SoftDeletionModel` from `django_soft_deletion.models` and inherit in your Model classes:
 
 For example, 
 ```
-from softdeletion.SoftDeletion import SoftDeletionModel
+from django_soft_deletion.models import SoftDeletionModel
 
 class Employee(SoftDeletionModel):
 	pass
@@ -34,9 +30,9 @@ class Employee(SoftDeletionModel):
 
 ## Functions
 
-`Model.objects()`: Return result excluding deleted values
+`Model.objects()...`: Return result excluding deleted values
 
-`Model.all_objects()`: Return result including deleted values
+`Model.all_objects()...`: Return result including deleted values
 
 `delete()`: Soft delete the item
 
