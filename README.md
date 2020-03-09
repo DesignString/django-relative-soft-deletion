@@ -18,7 +18,7 @@ pip install git+https://github.com/DesignString/django-relative-soft-deletion.gi
 
 ## Usage
 
-Import the `SoftDeletionModel` from `softdeletion` and inherit in your Model classes:
+Import the `SoftDeletionModel` from `softdeletion.SoftDeletion` and inherit in your Model classes:
 
 ```
 from softdeletion.SoftDeletion import SoftDeletionModel
