@@ -42,7 +42,7 @@ def _get_delete_filters_kwargs(model, *args, **kwargs):
     kwargs_all = list(_get_kwargs_from_args(args)) + list(kwargs.keys())
     filter_keys = list(filter(lambda x: '__' in x, kwargs_all))
     for filter_key in filter_keys:
-        current_model = model                     # BEWARE, DON'T REMOVE THIS LINE FROM HERE
+        current_model = model
         filter_lookups = filter_key.split('__')
         add_lookup = ''
         for lookup in filter_lookups:
@@ -54,13 +54,9 @@ def _get_delete_filters_kwargs(model, *args, **kwargs):
                         add_lookup = '__'.join([add_lookup, lookup]) if add_lookup else lookup
                         if current_model and has_field(current_model, 'deleted_at'):
                             filter_kwargs.update({'__'.join([add_lookup, 'deleted_at']): None})
-                    else:
-                        # Field is not a Relation, must be a Lookup or Transform
-                        pass
                 else:
                     break
             except FieldDoesNotExist:
-                # FieldDoesNotExist, must be a Lookup or Transform
                 continue
     return filter_kwargs
 
