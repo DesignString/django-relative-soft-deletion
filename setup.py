@@ -1,10 +1,13 @@
 from setuptools import setup
 
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+    
 setup(
   name = django-relative-softdeletion
   version = 0.1
-  description = A Django models extension to add soft deletion functionality.
-  long_description = file: README.rst
+  description = A Django models extension to add soft deletion functionality
+  long_description=long_description,
   url = https://www.designstring.com/
   author = Designstring
   author_email = admin@designstring.com
