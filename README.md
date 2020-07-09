@@ -13,7 +13,7 @@ If you want to include deleted data in filteration process, use `all_objects()` 
 Activate your environment and install the plugin using the command given below:
 
 ```
-pip install git+https://github.com/DesignString/django-relative-soft-deletion.git
+pip install django-relative-softdeletion
 ```
 
 
