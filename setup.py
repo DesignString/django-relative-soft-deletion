@@ -5,11 +5,11 @@ with open("README.md", "r") as fh:
     
 setup(
   name="django-relative-softdeletion",
-  version= "0.0.1",
+  version= "0.0.2",
   description="A Django models extension to add soft deletion functionality",
   long_description=long_description,
   long_description_content_type="text/markdown",
-  url="https://www.designstring.com/",
+  url="https://github.com/DesignString/django-relative-soft-deletion",
   author="Designstring",
   author_email="admin@designstring.com",
   license ="MIT",
